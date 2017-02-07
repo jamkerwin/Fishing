@@ -15,7 +15,7 @@
 </tr>
 <tr>
 <td width="48%">1 Fishing Rod &amp; Reel</td>
-<td width="10">
+<td width="10%">
 <input type="text" name="txtRod" size="5" value="7.99"></td>
 <td width="43%"><select size="1" name="qRod">
 <option selected value="0"> Select Quantity</option>
@@ -41,10 +41,11 @@
 </select></td></tr>
 
 <p align="center"> <input type="submit" value="Calculate your order" name="btnSubmit" onClick="calcTotal()">
-<input type="reset" value="Clear" name="btnClear">
+<input type="clear" value="Reset" name="btnClear">
 <p align="center">Thankyou for your purchase.</p>
 <p align="center">Your total is: </p>
-  <p align="center"><input type="text" name="txtTotal" size="10" value="0.00"></p></form>
+<p align="center"><input type="text" name="txtTotal" size="10" value="0.00"></p>
+  </form>
 <script language="javascript">
 function calcTotal(){
   var strRod, strBox,prRod, prBox, strTotal;
