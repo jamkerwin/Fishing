@@ -20,8 +20,8 @@
 <td width="43%"><select size="1" name="qRod">
 <option selected value="0"> Select Quantity</option>
 <option value="1">1</option>
-<option value="2">3</option>
-<option value="3">2</option>
+<option value="2">2</option>
+<option value="3">3</option>
 </select></td></tr>
 <tr>
 <td width="48%">1 Tackle Box</td>
@@ -33,7 +33,7 @@
 </select></td></tr>
 <tr>
 <td width="48%">1 Taga Box </td>
-<td widt="10%"><input type="text" name="txtBox" size="5" value="1.75"></td>
+<td widt="10%"><input type="text" name="txtBox1" size="5" value="1.75"></td>
 <td width="43%"><select size="1" name="tBox"><option selected value="0">Select Quantity</option>
 <option value="1">1</option>
 <option value="2">2</option>
@@ -41,23 +41,27 @@
   </select></td></tr></table>
 
 <p align="center"> <input type="submit" value="Calculate your order" name="btnSubmit" onClick="calcTotal()">
-<input type="reset" value="Reset" name="btnClear">
+<input type="reset" value="clear" name="btnClear">
 <p align="center">Thankyou for your purchase.</p>
 <p align="center">Your total is: </p>
 <p align="center"><input type="text" name="txtTotal" size="10" value="0.00"></p>
   </form>
 <script language="javascript">
 function calcTotal(){
-  var strRod, strBox,prRod, prBox, strTotal;
+  var strRod, strBox,prRod, prBox,prTaga,strTaga, strTotal;
   strRod=document.form.qRod.value;
   strBox=document.form.qBox.value;
-  prRod = document.form.txtRod.value;
+  prRod =document.form.txtRod.value;
   prBox=document.form.txtBox.value;
+  strTaga=document.form.tBox.value;
+  prTaga=document.form.txtBox1.value;
   
   strRod=parseInt(strRod)*prRod;
   strBox=parseInt(strBox)*prBox;
-  strTotal=(strRod + strBox);
+  strTaga=parseInt(strTaga)*prTaga;
+  strTotal=(strRod + strBox+strTaga);
   document.form.txtTotal.value=strTotal;
+  
 }
   </script></body></html>
 
